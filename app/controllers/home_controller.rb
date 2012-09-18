@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-      @num = 10
+      @num = 15
   end
 end
