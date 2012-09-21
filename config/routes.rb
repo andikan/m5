@@ -3,7 +3,9 @@ M5::Application.routes.draw do
   root :to => 'home#index'
 
   get "/mrt" => "home#mrt_all"
-  get "/mrt/:id" => "home#mrt", :constraints => {:id => /\d/}
+  get "/mrt/:id" => "home#mrt"
+
+  get "/spot/:id" => "home#spot"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

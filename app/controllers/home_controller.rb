@@ -22,6 +22,16 @@ class HomeController < ApplicationController
     # render :partial => 'home/return'
   end
 
+  def mrt
+    @return = Mrt.where(:id => params[:id])
+    render :json => @return
+  end
+
+  def spot
+    @return = Mrt.where(:id => params[:id])[0].spots
+    render :json => @return
+  end
+
 
 
   protected
