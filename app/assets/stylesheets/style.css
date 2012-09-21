@@ -1,0 +1,29 @@
+body{
+	background: #444;
+}
+
+.wrapper{
+	position: relative;
+	margin: 0 auto;
+	background: #444;
+	width: 1024px;
+	height: 1263px;
+}
+
+
+.map{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url('./routemap2012big.jpeg') no-repeat center center;
+	background-size: cover;
+	-webkit-transition: all 0.3s linear;
+}
+
+.blur{
+	opacity: 0.8;
+	-webkit-transform: scale(0.95);
+	z-index: 2;
+	/*很吃資源*/
+	/*-webkit-filter: blur(3px);*/
+}
