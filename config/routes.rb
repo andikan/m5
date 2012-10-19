@@ -1,11 +1,16 @@
 M5::Application.routes.draw do
 
-  root :to => 'home#index'
+  get "test/spot"
 
+  root :to => 'home#index'
+  # GET mrt
   get "/mrt" => "home#mrt_all"
   get "/mrt/:id" => "home#mrt"
-
+  # GET spot
   get "/spot/:id" => "home#spot"
+
+  get "/test/spot" => "test#spot"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

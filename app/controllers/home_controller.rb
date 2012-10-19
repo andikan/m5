@@ -11,9 +11,11 @@ class HomeController < ApplicationController
     render 'home/map'
   end
 
+  # get "/mrt"
   def mrt_all 
-    @mrt_all = Mrt.all   
-    render :json => @mrt_all
+    @return_value = Mrt.all   
+    puts @return_value[32]['name']
+    render :json => @return_value
     # @render_json = JSON.pretty_generate(@mrt_all)
     # render :json => @mrt_all, :charset => 'UTF-8', :callback => "call_back"
     # respond_to do |format|
@@ -23,7 +25,7 @@ class HomeController < ApplicationController
   end
 
   def mrt
-    @return = Mrt.where(:id => params[:id])
+    @return = Mrt.where(:id => params[:id])[0]
     render :json => @return
   end
 
