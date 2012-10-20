@@ -44,6 +44,11 @@ class HomeController < ApplicationController
     render :json => @return
   end
 
+  def spot
+    @return = Spot.where(:id => params[:id])[0]
+    render :json => @return
+  end
+
   def luckyspot
     # taipei station (25.046374, 121.517896)
     @direction = params[:direction]
