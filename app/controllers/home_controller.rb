@@ -56,13 +56,10 @@ class HomeController < ApplicationController
 
   def luckyspot
     # taipei station (25.046374, 121.517896)
-    @direction = params[:direction]
-    @num1 = params[:num1]
-    @num2 = params[:num2]
-    @return = {}
-    @return['direction'] = @direction
-    @return['num1'] = @num1
-    @return['num2'] = @num2
+    r = Random.new
+    spot_id = r.rand(1...135)
+    
+    @return = Spot.where(:id => spot_id)[0]
     render :json => @return
   end
 

@@ -20,7 +20,7 @@ M5::Application.routes.draw do
 
 
   # GET lucky spot
-  get "/luckyspot/:direction/:num1/:num2" => "home#luckyspot"
+  get "/luckyspot" => "home#luckyspot"
 
   get "/test/spot" => "test#spot"
 
