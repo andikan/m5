@@ -15,6 +15,10 @@ M5::Application.routes.draw do
   # GET spot
   get "/spot/:id" => "home#spot"
 
+  # GET spot_mrt
+  get "/spot_id_mrt/:id" => "home#spot_id_mrt"
+
+
   # GET lucky spot
   get "/luckyspot/:direction/:num1/:num2" => "home#luckyspot"
 
