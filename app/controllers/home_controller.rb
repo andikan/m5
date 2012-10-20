@@ -29,8 +29,25 @@ class HomeController < ApplicationController
     render :json => @return
   end
 
-  def spot
+  def mrt_id_spot
     @return = Mrt.where(:id => params[:id])[0].spots
+    render :json => @return
+  end
+
+  def mrt_number_spot
+    @return = Mrt.where(:number => params[:number])[0].spots
+    render :json => @return
+  end
+
+  def luckyspot
+    # taipei station (25.046374, 121.517896)
+    @direction = params[:direction]
+    @num1 = params[:num1]
+    @num2 = params[:num2]
+    @return = {}
+    @return['direction'] = @direction
+    @return['num1'] = @num1
+    @return['num2'] = @num2
     render :json => @return
   end
 

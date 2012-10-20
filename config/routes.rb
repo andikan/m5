@@ -6,8 +6,12 @@ M5::Application.routes.draw do
   # GET mrt
   get "/mrt" => "home#mrt_all"
   get "/mrt/:id" => "home#mrt"
-  # GET spot
-  get "/spot/:id" => "home#spot"
+  # GET mrt_spot
+  get "/mrt_id_spot/:id" => "home#mrt_id_spot"
+  get "/mrt_number_spot/:number" => "home#mrt_number_spot"
+
+  # GET lucky spot
+  get "/luckyspot/:direction/:num1/:num2" => "home#luckyspot"
 
   get "/test/spot" => "test#spot"
 
