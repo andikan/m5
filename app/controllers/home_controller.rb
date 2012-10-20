@@ -24,8 +24,13 @@ class HomeController < ApplicationController
     # render :partial => 'home/return'
   end
 
-  def mrt
+  def mrt_id
     @return = Mrt.where(:id => params[:id])[0]
+    render :json => @return
+  end
+
+  def mrt_number
+    @return = Mrt.where(:number => params[:number])[0]
     render :json => @return
   end
 

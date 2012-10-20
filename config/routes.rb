@@ -5,7 +5,9 @@ M5::Application.routes.draw do
   root :to => 'home#index'
   # GET mrt
   get "/mrt" => "home#mrt_all"
-  get "/mrt/:id" => "home#mrt"
+  get "/mrt_id/:id" => "home#mrt_id"
+  get "/mrt_number/:number" => "home#mrt_number"
+
   # GET mrt_spot
   get "/mrt_id_spot/:id" => "home#mrt_id_spot"
   get "/mrt_number_spot/:number" => "home#mrt_number_spot"
